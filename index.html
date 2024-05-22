@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiii Jay</title>
+  <link rel="icon" type="image/tiiijay-icon" href="tiiijay.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="background-container">
+
+        <video class="animated-background" loop muted autoplay>
+            <source src="camp Animation.mp4" type="video/mp4">
+        </video>
+      
+      <div class="day-night-toggle">
+        <input type="checkbox" id="day-night-switch" class="toggle-checkbox">
+        <label for="day-night-switch" class="toggle-label">
+          <span class="toggle-inner"></span>
+          <span class="toggle-switch"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="app-content">
+        <header class="app-header" id="app-header">
+        <img src="Tiii Jay Logo white f.png" alt="Logo" class="logo" onclick="window.location.href='home.html';">
+        <!--<h1>Tiii Jay Cafe</h1>-->
+        <nav>
+          <ul>
+            <li> <a href="home.html"> <img src="home icon.png" alt="Home" id="home"></a></li>
+            <li><a href="#user"> <img src="user icon.png" alt="Login" id="user"></a></li>
+            <li><a href="#options"> <img src="options icon.png" alt="Options" id="options"></a></li>            
+          </ul>
+        </nav>
+        </header>
+
+        <main>
+          <svg class="svg-rec" id="svg-rec" width="100%" height="120">
+            <rect x="0" y="70" rx="20" ry="20" width="100%" height="50" style="fill:rgb(0, 0, 0);opacity:0.6" />
+            <g class="icons-container">
+              <a href="#music-player">
+                <image x="20%" y="80" width="40" height="30" xlink:href="music icon.png" id="music-icon"></image>
+              </a>
+                <image x="25%" y="80" width="40" height="30" xlink:href="previous icon.png" id="previous-icon"></image>
+                <image x="28%" y="80" width="40" height="30" xlink:href="play icon.png" id="play-icon"></image>
+                <image x="31%" y="80" width="40" height="30" xlink:href="next icon.png" id="next-icon"></image>
+                <image x="36%" y="80" width="40" height="30" xlink:href="volume icon.png" id="volume-icon"></image>
+                <image x="39%" y="80" width="40" height="30" xlink:href="mute icon.png" id="mute-icon"></image> 
+            
+          
+              <a href="#water-reminder">
+                <image x="50%" y="80" width="40" height="40" xlink:href="water icon.png" id="water-icon"></image>
+              </a>
+              <a href="#focus-assist">
+                <image x="60%" y="80" width="40" height="40" xlink:href="focus icon.png" id="focus-icon"></image>
+              </a>
+              <a href="#alerts">
+                <image x="70%" y="80" width="40" height="40" xlink:href="reminders icon.png" id="alert-icon"></image>
+              </a>
+              
+            </g>
+            
+          </svg>
+          
+      
+          <div class="music-player-container" id="music-player-container">             
+            <section id="music-player">
+              <div class="music-controls">
+                <h2>Music Player</h2>
+                <button class="play-btn"> <img src="play rounded icon.png" alt="rounded-play-icon"></button>
+                <button class="pause-btn"> <img src="pause rounded icon.png" alt="rounded-pause-icon"></button>
+                <input type="range" class="volume-slider" id="volume-range" min="0" max="100" step="0.1" value="50">
+              </div>
+              <div class="spotify-embed">
+                <iframe src="https://open.spotify.com/embed/playlist/0DliplvNPxKoXoeaAD3ZUB?utm_source=generator" width="320px" height="400px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              </div>
+              <button class="minimize-btn"><img src="minimize icon.png" alt="minimize" id="minimize"></button>
+            </section>             
+          </div>
+      
+          <div class="water-reminder-container" id="water-reminder-container">
+            <section id="water-reminder">
+              <div class="water-reminder-controls">
+                <h2>Water Reminder</h2>
+                <button class="set-reminder-btn">Set Reminder</button>
+                <div class="water-intake-display">0 oz</div>
+              </div>
+              <button class="minimize-btn"><img src="minimize icon.png" alt="minimize" id="minimize"></button>
+            </section>
+          </div>
+      
+          <div class="focus-assist-container" id="focus-assist-container">
+            <section id="focus-assist">
+              <div class="focus-timer">
+                <h2>Focus Assist</h2>
+                <div class="timer-display">25:00</div>
+                <button class="start-stop-btn">Start/Stop</button>
+              </div>
+              <button class="minimize-btn"><img src="minimize icon.png" alt="minimize" id="minimize"></button>
+            </section>
+          </div>
+      
+          <div class="alerts-container" id="alerts-container">
+            <section id="alerts">
+              <h2>Alerts</h2>
+              <div class="alert-controls">
+                <input type="text" class="alert-message-input" placeholder="Enter alert message">
+                <button class="set-alert-btn">Set Alert</button>
+              </div>
+              <button class="minimize-btn"><img src="minimize icon.png" alt="minimize" id="minimize"></button>
+            </section>
+          </div>
+      
+          <div class="social-links-container" id="social-links-container">
+            <section id="social-links">
+              <h2>Social Links</h2>
+              <div class="social-links">
+                <a href="https://discord.com" target="_blank">Discord</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+              </div>
+              <button class="minimize-btn"><img src="minimize icon.png" alt="minimize" id="minimize"></button>
+            </section>
+          </div>
+        </main>
+    </div>
+    
+  </div>
+  <footer>
+    <p>&copy; 2024 Tiii Jay. All rights reserved.</p>
+  </footer>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

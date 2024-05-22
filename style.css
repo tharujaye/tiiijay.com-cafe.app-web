@@ -1,0 +1,260 @@
+.logo {
+    padding-left: 10px;
+    width: 80px; 
+    height: auto;
+    display: block; 
+    cursor: pointer;
+}
+
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*background-color: rgba(255, 255, 255, 0.493);*/
+    padding: 5px;
+    box-sizing: border box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+    transform: translateY(0);
+    z-index: 100;
+}
+  
+.app-header.hidden {
+    transform: translateY(-100%);
+}
+  
+.app-content {
+    flex-grow: 1;
+    padding: calc(var(--header-height) + 20px) 20px 20px;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.app-header ul{
+    position: relative ;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+
+.app-header ul li {
+    position: relative;
+    list-style: none;
+}
+
+.app-header ul li a {
+    position: relative;
+    margin: 0 30px;
+    text-decoration:none ;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 1000px;
+    transition: 0.6s;
+    font-size: large;
+}
+
+#home, #user, #options {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+    
+#home:hover, #user:hover, #options:hover {
+    transform: scale(1.4);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: aliceblue;
+    height: 100vh;
+    overflow: hidden;
+}
+    
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+    
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+    
+.animated-background {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+}
+    
+.app-content {
+    flex-grow: 1;
+    padding-left: 20px;
+    padding-right: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+  
+.music-player-container,
+.water-reminder-container,
+.focus-assist-container,
+.alerts-container,
+.social-links-container {
+    position: absolute;
+    bottom: 75px;
+    left: 10%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    width: 100%;
+    max-width: 320px;
+    transition: opacity 0.3s ease;
+}
+
+.music-player-container.show,
+.water-reminder-container.show,
+.focus-assist-container.show,
+.alerts-container.show,
+.social-links-container.show {
+    display: block;
+    transition: 0.4s ease-in-out;
+}
+
+.svg-rec {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.svg-rec.hidden {
+    transform: translateY(100%);
+    pointer-events: none;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    transition: opacity 0.3s ease;
+}
+  
+.icons-container a {
+    flex: 1;
+    text-align: center;
+    width: 50%;   
+}
+
+.icons-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.focus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.focus-container a {
+    flex: 1;
+    text-align: center;
+    width: 50%;   
+}
+
+#music-icon, #previous-icon, #play-icon, #next-icon, #pause-icon, #water-icon, #focus-icon, #alert-icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/*
+.music-controls{
+    width: 400px;
+    height: 100px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+*/
+
+.play-btn {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.pause-btn {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.spotify-embed {
+    margin-top: 20px;
+}
+    
+/*
+.water-reminder-controls {
+    width: 400px;
+    height: 100px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+*/  
+
+.minimize-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#minimize{
+    width: 25px;
+    height: 25px;
+}
+
+footer {
+    font-size: small;
+    padding-left: 5px;
+    opacity: 75%;
+    
+}
